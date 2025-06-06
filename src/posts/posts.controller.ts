@@ -8,7 +8,7 @@ import { CreatePostDto } from './dtos/create-post.dto';
 export class PostsController {
   constructor(private readonly postService: PostsService) {}
 
-  @Get('/:user')
+  @Get('/:id')
   public getPosts(@Param('userId') userId: string) {
     return this.postService.findAll(userId);
   }
