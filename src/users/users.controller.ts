@@ -8,7 +8,10 @@ import {
   Headers,
   ParseIntPipe,
   DefaultValuePipe,
+  ValidationPipe,
+  Ip,
 } from '@nestjs/common';
+import { CreateUserDto } from './dtos/create-user.dto';
 
 @Controller('users')
 export class UsersController {
@@ -30,9 +33,14 @@ export class UsersController {
   }
 
   @Post()
-  public createtUsers(@Body() body: any, @Headers() headers: any) {
-    console.log(body);
+  public createtUsers(
+    @Body(new ValidationPipe()) createUserDto: CreateUserDto,
+    @Headers() headers: any,
+    @Ip() ip: any,
+  ) {
+    console.log(createUserDto);
     console.log(headers);
+    console.log(ip);
     return 'You sent a post  request to the users endpoint';
   }
 }
