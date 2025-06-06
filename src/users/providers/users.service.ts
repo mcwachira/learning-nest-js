@@ -26,7 +26,7 @@ export class UsersService {
     @Inject(forwardRef(() => AuthService))
     private readonly authService: AuthService,
   ) {}
-  public findAllUsers() {
+  public findAllUsers(limit: number, page: number) {
     const isAuth = this.authService.isAuth();
     console.log(isAuth);
     return [

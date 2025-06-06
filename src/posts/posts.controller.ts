@@ -3,7 +3,7 @@ import { PostsService } from './services/posts.service';
 import { ApiTags } from '@nestjs/swagger';
 
 @Controller('posts')
-@ApiTags('Users')
+@ApiTags('Posts')
 export class PostsController {
   constructor(private readonly postService: PostsService) {}
 
