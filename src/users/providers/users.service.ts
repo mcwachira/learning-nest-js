@@ -27,6 +27,8 @@ export class UsersService {
     private readonly authService: AuthService,
   ) {}
   public findAllUsers() {
+    const isAuth = this.authService.isAuth();
+    console.log(isAuth);
     return [
       { id: 1, firstName: 'John', email: 'john@doe.com' },
       { id: 2, firstName: 'Alice', email: 'alice@doe.com' },
