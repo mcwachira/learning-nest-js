@@ -16,7 +16,7 @@ import {
   Inject,
 } from '@nestjs/common';
 import { CreateUserDto } from '../dtos/create-user.dto';
-import { GetUsersParamDto } from '../dtos/get-users-param-dto';
+import { GetUsersParamDto } from '../dtos/get-users-param.dto';
 import { PatchUserDto } from '../dtos/patch-user.dto';
 import { AuthService } from 'src/auth/auth.service';
 

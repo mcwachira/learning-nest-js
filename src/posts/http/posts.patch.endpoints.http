@@ -1,0 +1,10 @@
+PATCH http://localhost:3001/posts
+Content-Type:application/json
+
+
+{
+"id":1234,
+"postType":"post"
+
+
+}
