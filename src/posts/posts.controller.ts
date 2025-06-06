@@ -19,7 +19,7 @@ export class PostsController {
   })
   @ApiResponse({
     status: 201,
-    description: 'You get a 201 resposne if your post is created successfully',
+    description: 'You get a 201 response if your post is created successfully',
   })
   @Post()
   public createPost(@Body() createPostDto: CreatePostDto) {
@@ -27,6 +27,13 @@ export class PostsController {
     return this.postService.createPost(createPostDto);
   }
 
+  @ApiOperation({
+    summary: 'Updated an exisiting Blog Post',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'You get a 200 response if your post is updated  successfully',
+  })
   @Patch()
   public updatePost(@Body() patchPostDto: PatchPostDto) {
     console.log(patchPostDto);

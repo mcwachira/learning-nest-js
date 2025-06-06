@@ -45,6 +45,8 @@ export class UsersController {
     description: 'The position of page number you want your api to return ',
     example: 1,
   })
+
+  /** method to fetch all users . limit will specify the number of users fetched per request and page will specify the page to get */
   public getUsers(
     @Query('limit', new DefaultValuePipe(10), ParseIntPipe) limit: number,
     @Query('page', new DefaultValuePipe(1), ParseIntPipe) page: number,
@@ -60,6 +62,7 @@ export class UsersController {
   }
 
   @Post()
+  /** method to create a user */
   public createUsers(
     @Body() createUserDto: CreateUserDto,
     @Headers() headers: any,
@@ -69,6 +72,7 @@ export class UsersController {
   }
 
   @Patch()
+  /** method to update the user  */
   public patchUsers(@Body() patchUserDto: PatchUserDto) {
     return this.usersService.patchUsers(patchUserDto);
   }
