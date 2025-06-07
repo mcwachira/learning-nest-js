@@ -150,6 +150,7 @@
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
                                     <span class="modifier"></span>
+                                    <span class="modifier"></span>
                                     <span class="modifier">Optional</span>
                                 <a href="#featuredImageUrl" >featuredImageUrl</a>
                             </li>
@@ -279,6 +280,7 @@
                             <span class="modifier"></span>
                             <span class="modifier"></span>
                             <span class="modifier"></span>
+                            <span class="modifier"></span>
                             <span class="modifier">Optional</span>
                         <span ><b>featuredImageUrl</b></span>
                         <a href="#featuredImageUrl"><span class="icon ion-ios-link"></span></a>
@@ -296,13 +298,13 @@
                         <b>Decorators : </b>
                         <br />
                         <code>
-                            @ApiPropertyOptional({example: &#x27;http://localhost.com/images/image1.jpg&#x27;, description: &#x27;Featured image for your blog&#x27;})<br />@IsOptional()<br />@IsUrl()<br />
+                            @ApiPropertyOptional({example: &#x27;http://localhost.com/images/image1.jpg&#x27;, description: &#x27;Featured image for your blog&#x27;})<br />@IsOptional()<br />@IsUrl()<br />@MaxLength(1024)<br />
                         </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/posts/dtos/create-post.dto.ts:85</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/posts/dtos/create-post.dto.ts:86</a></div>
                         </td>
                     </tr>
 
@@ -343,7 +345,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/posts/dtos/create-post.dto.ts:129</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/posts/dtos/create-post.dto.ts:130</a></div>
                         </td>
                     </tr>
 
@@ -419,7 +421,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/posts/dtos/create-post.dto.ts:93</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/posts/dtos/create-post.dto.ts:94</a></div>
                         </td>
                     </tr>
 
@@ -580,7 +582,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/posts/dtos/create-post.dto.ts:103</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/posts/dtos/create-post.dto.ts:104</a></div>
                         </td>
                     </tr>
 
@@ -723,6 +725,7 @@ export class CreatePostDto {
   })
   @IsOptional()
   @IsUrl()
+  @MaxLength(1024)
   featuredImageUrl?: string;
 
   @ApiPropertyOptional({
